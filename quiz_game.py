@@ -1,4 +1,4 @@
-""" Some quiz where you try to figure out what a word is! """
+""" Quiz game inspired by Tech With Tim's first project in the 5 Mini Python Projects video """
 
 playing = input("A definiton of a word will be given and you must guess the word, got it? (yes/no)")
 
