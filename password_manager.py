@@ -1,13 +1,12 @@
-'''
-Password manager from Tech With Tim's 5 Mini Python Projects.
-I got the master password to work!!!
-'''
+''' Password manager from Tech With Tim's 5 Mini Python Projects.
+    I got the master password to work!!! '''
+
 import base64
 import os
 from cryptography.fernet import Fernet
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
-'''
+
 def write_key():
     master_pwd = input("Enter master password: ").encode()
     salt = os.urandom(16)
@@ -21,7 +20,7 @@ def write_key():
     with open("key.key", "wb") as key_file:
         key_file.write(key + "\n".encode() + salt)
     return key
-'''
+
 def load_key():
     master_pwd = input("Enter master password: ").encode()
     with open("key.key", "rb") as f:
